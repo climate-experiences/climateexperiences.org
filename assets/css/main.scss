@@ -3,6 +3,36 @@
 
 // start content
 
+
+.masthead-alt {
+  min-height: 30rem;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/patrick-federi-RVAyA3iyWro-unsplash.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.masthead-alt h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 600px) {
+  .masthead-alt {
+    height: 100vh;
+  }
+  .masthead-alt h1 {
+    font-size: 5.5rem;
+  }
+}
+
 .bg-alt1 {
   background-color: #9E3B1C;
 }
@@ -25,4 +55,11 @@
 
 .text-alt3 {
   color: #1D809F !important;
+}
+
+.sidebar-nav li a{
+  display:inline-block;
+  text-decoration: none;
+  padding: 15px;
+  color: white;
 }

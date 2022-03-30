@@ -10,7 +10,7 @@
     </a>
     <nav id="sidebar-wrapper">
       <ul class="sidebar-nav">
-        <li class="sidebar-brand">
+        <li class="sidebar-brand text-">
           <a class="js-scroll-trigger" href="#page-top">Start</a>
         </li>
         <li class="sidebar-nav-item">
@@ -32,7 +32,7 @@
     </nav>
 
     <!-- Header -->
-    <header class="masthead d-flex">
+    <header class="masthead-alt text-white d-flex">
       <div class="container text-center my-auto">
         <h1 class="mb-1">Climate Experiences</h1>
         <h3 class="mb-5">
@@ -212,12 +212,13 @@
         <div class="row">
           <div class="col-lg-10 mx-auto">
           </div>
-          <div class="col-lg-6">
-            <img style="height:300px; overflow: hidden;" src="assets/img/advanced-feature-2.jpg" title="About" />
-          </div>
-          <div class="col-lg-6">
-            <p class="mb-5 desc-font text-left">Finding 4 summary</p>
-            <h3>Here's what we found.</h3>
+          <div class="col-lg-12">
+            <p class="mb-5 desc-font text-left">Finding 4 summary - map feature</p>
+            {% leaflet_map {"zoom" : 4 } %}
+                {% leaflet_marker { "latitude" : 52.4840782,
+                                   "longitude" : -1.9000395,
+                                   "popupContent" : "Birmingham, it's a great place!"} %}
+            {% endleaflet_map %}
           </div>
         </div>
       </div>
@@ -246,12 +247,15 @@
         <div class="row">
           <div class="col-lg-10 mx-auto">
           </div>
-          <div class="col-lg-6">
-            <img style="height:300px; overflow: hidden;" src="assets/img/advanced-feature-2.jpg" title="About" />
-          </div>
-          <div class="col-lg-6">
+          <div class="col-md-6">
             <p class="mb-5 desc-font text-left">Project Team</p>
             <h3>project team and partners, short blurb about each person with headshot and preferred job title</h3>
+            <div class="row align-items-start">
+              <div class="col bg-dark"><img style="height:150px; overflow: hidden;" src="assets/img/jk_avatar_square.jpg" title="Jeremy Kidwell" /><p>Jeremy Kidwell <br />hacker</p></div>
+              <div class="col">person 2</div>
+              <div class="col">person 3</div>
+              <div class="col">person 4</div>
+            </div>
           </div>
         </div>
       </div>
